@@ -1,0 +1,49 @@
+<p>person-info works!</p>
+
+<div class="person-container">
+    <div class="person-attribute">
+        Name:
+        {{person?.name}}
+    </div>
+
+    <div class="person-attribute">
+        Height:
+        {{person?.height}}
+    </div>
+
+    <div class="person-attribute">
+        Mass:
+        {{person?.mass}}
+    </div>
+
+    <div class="person-attribute">
+        Hair color:
+        {{person?.hair_color}}
+    </div>
+
+    <div class="person-attribute">
+        Skin color:
+        {{person?.eye_color}}
+    </div>
+
+    <div class="person-attribute">
+        Gender:
+        {{person?.gender}}
+    </div>
+
+    <div class="person-attribute">
+        Films:
+        <li *ngFor="let film of films">
+            <div class="film-container">
+                <button (click)="goToFilm(film)">
+                    Title: <div>{{film?.title}}</div>
+                    Director: <div>{{film?.director}}</div>
+                </button>
+                
+            </div>
+
+
+        </li>
+    </div>
+
+</div>
