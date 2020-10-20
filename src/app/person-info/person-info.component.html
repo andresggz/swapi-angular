@@ -1,4 +1,4 @@
-<p>person-info works!</p>
+<h2>Character details</h2>
 
 <div class="person-container">
     <div class="person-attribute">
@@ -31,19 +31,23 @@
         {{person?.gender}}
     </div>
 
-    <div class="person-attribute">
-        Films:
-        <li *ngFor="let film of films">
-            <div class="film-container">
-                <button (click)="goToFilm(film)">
-                    Title: <div>{{film?.title}}</div>
-                    Director: <div>{{film?.director}}</div>
-                </button>
-                
-            </div>
 
+    <div class="films-container">
+        <h3>Films</h3>
 
-        </li>
+        <ul  *ngFor="let film of films">
+
+            <button class="aFilm" (click)="goToFilm(film)">
+                <div>
+                    Title: {{film?.title}}
+                </div>
+
+                <div>
+                    Director: {{film?.director}}
+                </div>
+
+            </button>
+
+        </ul>
     </div>
-
 </div>

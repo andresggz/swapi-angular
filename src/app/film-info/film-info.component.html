@@ -1,4 +1,4 @@
-<p>film-info works!</p>
+<h2>Film details</h2>
 
 <div class="film-container">
     <div class="film-attribute">
@@ -31,19 +31,17 @@
         {{film?.release_date | date}}
     </div>
 
-    <div class="film-attribute">
-        Characters:
-        <li *ngFor="let character of characters">
-            <div class="film-container">
-                <button (click)="goToCharacter(character)">
+    <div class="characters-container">
+        <h2>Characters: </h2>
+        <div *ngFor="let character of characters">
+                <button class="aCharacter" (click)="goToCharacter(character)">
                     Name: <div>{{character?.name}}</div>
                     Birth year: <div>{{character?.birth_year}}</div>
                 </button>
                 
+
+
             </div>
-
-
-        </li>
     </div>
 
 </div>

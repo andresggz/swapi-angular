@@ -1,16 +1,16 @@
-<p>people works!</p>
+    <h2>Characters</h2>
     <button class="next-button" (click)="next()">
         Next
     </button>
 
-    <button *ngFor="let person of people" (click)="openPerson(person)">
-        <div class="person-container">
+    <button class="person-button" *ngFor="let person of people" (click)="openPerson(person)">
+        
         <div class="attribute-container">
             name: {{person.name}}
         </div>
+    
         <div class="attribute-container">
             films: {{person.films.length}}
         </div>
-    </div>
     </button>
     
